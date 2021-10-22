@@ -18,7 +18,7 @@ Para computadores que podem se mover entre redes com frequência (como laptops),
 
 Independentemente de quão dinâmico seu ambiente de rede possa ser, ainda é útil estar familiarizado com a ideia geral por trás de cada uma das zonas predefinidas para firewalld. As zonas predefinidas firewalldsão, em ordem de menos confiável para mais confiável : </br>
 
-* Block : O nível mais baixo de confiança. 
+* Block : O nível mais baixo de confiança.</br>
 Todas as conexões de entrada são interrompidas sem resposta e apenas as conexões de saída são possíveis. </br>
 
 * Block : Semelhante ao anterior, mas em vez de simplesmente eliminar as conexões, as solicitações de entrada são rejeitadas com uma mensagem icmp-host-prohibitedou icmp6-adm-prohibited.
@@ -41,7 +41,8 @@ Mais alguns serviços podem ser permitidos.
 * Home : Um ambiente doméstico.</br>
 Geralmente implica que você confia na maioria dos outros computadores e que mais alguns serviços serão aceitos.
 
-* Trusted : Confia em todas as máquinas da rede. A mais aberta das opções disponíveis e deve ser usada com moderação.
+* Trusted : Confia em todas as máquinas da rede.</br>
+A mais aberta das opções disponíveis e deve ser usada com moderação.
 
 > Para usar o firewall, podemos criar regras e alterar as propriedades de nossas zonas e, em seguida, atribuir nossas interfaces de rede às zonas mais apropriadas.
 
