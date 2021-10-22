@@ -104,7 +104,7 @@ Geralmente implica que você confia na maioria dos outros computadores e que mai
 </zone>
 ```
 
-* Trusted : Confia em todas as máquinas da rede.</br>
+* <h4> Trusted </h4> : Confia em todas as máquinas da rede.</br>
 A mais aberta das opções disponíveis e deve ser usada com moderação.
 
 ```Trusted
