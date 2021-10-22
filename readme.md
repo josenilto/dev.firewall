@@ -34,6 +34,15 @@ Você não confia em outros computadores, mas pode permitir conexões de entrada
 * External : Redes externas caso você esteja usando o firewall como gateway.</br>
 Ele é configurado para mascaramento de NAT para que sua rede interna permaneça privada, mas acessível.
 
+```External
+<?xml version="1.0" encoding="utf-8"?>
+<zone>
+  <short>External</short>
+  <description>For use on external networks. You do not trust the other computers on networks to not harm your computer. Only selected incoming connections are accepted.</description>
+  <service name="ssh"/>
+  <masquerade/>
+</zone>
+```
 * Internal : O outro lado da zona externa, usado para a parte interna de um gateway.</br>
 Os computadores são bastante confiáveis e alguns serviços adicionais estão disponíveis.
 
@@ -45,6 +54,16 @@ Mais alguns serviços podem ser permitidos.
 
 * Home : Um ambiente doméstico.</br>
 Geralmente implica que você confia na maioria dos outros computadores e que mais alguns serviços serão aceitos.
+
+<?xml version="1.0" encoding="utf-8"?>
+<zone>
+  <short>Home</short>
+  <description>For use in home areas. You mostly trust the other computers on networks to not harm your computer. Only selected incoming connections are accepted.</description>
+  <service name="ssh"/>
+  <service name="mdns"/>
+  <service name="samba-client"/>
+  <service name="dhcpv6-client"/>
+</zone>
 
 * Trusted : Confia em todas as máquinas da rede.</br>
 A mais aberta das opções disponíveis e deve ser usada com moderação.
