@@ -1,4 +1,4 @@
-# 🛠 dev.firewall | Como configurar um firewall usando firewalld
+# 🛠 Dev Firewall | Como configurar um firewall usando firewalld
 
 Firewalld é um software de gerenciamento de firewall disponível para muitas distribuições Linux, que atua como um frontend para os sistemas de filtragem de pacotes nftables ou iptables do Linux. </br>
 
