@@ -53,6 +53,7 @@ Quando uma regra é adicionada ou modificada, por padrão, apenas o firewall em 
 Após a próxima reinicialização - ou recarga do firewalldserviço - apenas as regras permanentes permanecerão.
 
 A maioria das firewall-cmdoperações pode receber um --permanentsinalizador para indicar que as alterações devem ser aplicadas à configuração permanente.</br>
+
 Além disso, o firewall em execução no momento pode ser salvo na configuração permanente com o firewall-cmd --runtime-to-permanentcomando.
 
 Essa separação entre o tempo de execução e a configuração permanente significa que você pode testar as regras com segurança em seu firewall ativo e, em seguida, recarregar para reiniciar se houver problemas.
