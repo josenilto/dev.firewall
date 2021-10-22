@@ -18,13 +18,16 @@ Para computadores que podem se mover entre redes com frequência (como laptops),
 
 Independentemente de quão dinâmico seu ambiente de rede possa ser, ainda é útil estar familiarizado com a ideia geral por trás de cada uma das zonas predefinidas para firewalld. As zonas predefinidas firewalldsão, em ordem de menos confiável para mais confiável : </br>
 
-* Block : O nível mais baixo de confiança. Todas as conexões de entrada são interrompidas sem resposta e apenas as conexões de saída são possíveis. </br>
+* Block : O nível mais baixo de confiança. 
+Todas as conexões de entrada são interrompidas sem resposta e apenas as conexões de saída são possíveis. </br>
 
 * Block : Semelhante ao anterior, mas em vez de simplesmente eliminar as conexões, as solicitações de entrada são rejeitadas com uma mensagem icmp-host-prohibitedou icmp6-adm-prohibited.
 
-* Public : representa redes públicas não confiáveis. Você não confia em outros computadores, mas pode permitir conexões de entrada selecionadas caso a caso.
+* Public : Representa redes públicas não confiáveis. 
+Você não confia em outros computadores, mas pode permitir conexões de entrada selecionadas caso a caso.
 
-* External : Redes externas caso você esteja usando o firewall como gateway. Ele é configurado para mascaramento de NAT para que sua rede interna permaneça privada, mas acessível.
+* External : Redes externas caso você esteja usando o firewall como gateway. 
+Ele é configurado para mascaramento de NAT para que sua rede interna permaneça privada, mas acessível.
 
 * Internal : O outro lado da zona externa, usado para a parte interna de um gateway. Os computadores são bastante confiáveis ​​e alguns serviços adicionais estão disponíveis.
 
@@ -32,17 +35,20 @@ Independentemente de quão dinâmico seu ambiente de rede possa ser, ainda é ú
 
 * Work : Usado para máquinas de trabalho. Confie na maioria dos computadores da rede. Mais alguns serviços podem ser permitidos.
 
-* Home : um ambiente doméstico. Geralmente implica que você confia na maioria dos outros computadores e que mais alguns serviços serão aceitos.
+* Home : Um ambiente doméstico. Geralmente implica que você confia na maioria dos outros computadores e que mais alguns serviços serão aceitos.
 
-* Trusted : confia em todas as máquinas da rede. A mais aberta das opções disponíveis e deve ser usada com moderação.
+* Trusted : Confia em todas as máquinas da rede. A mais aberta das opções disponíveis e deve ser usada com moderação.
 
 > Para usar o firewall, podemos criar regras e alterar as propriedades de nossas zonas e, em seguida, atribuir nossas interfaces de rede às zonas mais apropriadas.
 
 ### Permanência de regra
 
-No firewalld, as regras podem ser aplicadas ao conjunto de regras de tempo de execução atual ou tornar-se permanentes . Quando uma regra é adicionada ou modificada, por padrão, apenas o firewall em execução no momento é modificado . Após a próxima reinicialização - ou recarga do firewalldserviço - apenas as regras permanentes permanecerão.
+No firewalld, as regras podem ser aplicadas ao conjunto de regras de tempo de execução atual ou tornar-se permanentes . 
+Quando uma regra é adicionada ou modificada, por padrão, apenas o firewall em execução no momento é modificado . 
+Após a próxima reinicialização - ou recarga do firewalldserviço - apenas as regras permanentes permanecerão.
 
-A maioria das firewall-cmdoperações pode receber um --permanentsinalizador para indicar que as alterações devem ser aplicadas à configuração permanente. Além disso, o firewall em execução no momento pode ser salvo na configuração permanente com o firewall-cmd --runtime-to-permanentcomando.
+A maioria das firewall-cmdoperações pode receber um --permanentsinalizador para indicar que as alterações devem ser aplicadas à configuração permanente. 
+Além disso, o firewall em execução no momento pode ser salvo na configuração permanente com o firewall-cmd --runtime-to-permanentcomando.
 
 Essa separação entre o tempo de execução e a configuração permanente significa que você pode testar as regras com segurança em seu firewall ativo e, em seguida, recarregar para reiniciar se houver problemas.
 
