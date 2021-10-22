@@ -28,8 +28,27 @@ Todas as conexões de entrada são interrompidas sem resposta e apenas as conex�
 
 * Block : Semelhante ao anterior, mas em vez de simplesmente eliminar as conexões, as solicitações de entrada são rejeitadas com uma mensagem icmp-host-prohibitedou icmp6-adm-prohibited.
 
+```Block
+<?xml version="1.0" encoding="utf-8"?>
+<zone target="%%REJECT%%">
+  <short>Block</short>
+  <description>Unsolicited incoming network packets are rejected. Incoming packets that are related to outgoing network connections are accepted. Outgoing network connections are allowed.</description>
+</zone>
+```
+
 * Public : Representa redes públicas não confiáveis.</br>
 Você não confia em outros computadores, mas pode permitir conexões de entrada selecionadas caso a caso.
+
+```Public
+<?xml version="1.0" encoding="utf-8"?>
+<zone>
+  <short>Public</short>
+  <description>For use in public areas. You do not trust the other computers on networks to not harm your computer. 
+  Only selected incoming connections are accepted.</description>
+  <service name="ssh"/>
+  <service name="dhcpv6-client"/>
+</zone>
+```
 
 * External : Redes externas caso você esteja usando o firewall como gateway.</br>
 Ele é configurado para mascaramento de NAT para que sua rede interna permaneça privada, mas acessível.
@@ -44,14 +63,27 @@ Ele é configurado para mascaramento de NAT para que sua rede interna permaneça
   <masquerade/>
 </zone>
 ```
+
 * Internal : O outro lado da zona externa, usado para a parte interna de um gateway.</br>
 Os computadores são bastante confiáveis e alguns serviços adicionais estão disponíveis.
+
+```Block
+
+```
 
 * Dmz : Usado para computadores localizados em uma DMZ (computadores isolados que não terão acesso ao resto da rede).</br>
 Apenas certas conexões de entrada são permitidas.
 
+```Block
+
+```
+
 * Work : Usado para máquinas de trabalho. Confie na maioria dos computadores da rede.</br>
 Mais alguns serviços podem ser permitidos.
+
+```Work
+
+```
 
 * Home : Um ambiente doméstico.</br>
 Geralmente implica que você confia na maioria dos outros computadores e que mais alguns serviços serão aceitos.
@@ -71,6 +103,14 @@ Geralmente implica que você confia na maioria dos outros computadores e que mai
 
 * Trusted : Confia em todas as máquinas da rede.</br>
 A mais aberta das opções disponíveis e deve ser usada com moderação.
+
+```Trusted
+<?xml version="1.0" encoding="utf-8"?>
+<zone target="ACCEPT">
+  <short>Trusted</short>
+  <description>All network connections are accepted.</description>
+</zone>
+```
 
 > Para usar o firewall, podemos criar regras e alterar as propriedades de nossas zonas e, em seguida, atribuir nossas interfaces de rede às zonas mais apropriadas.
 
