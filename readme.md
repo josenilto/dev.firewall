@@ -23,19 +23,23 @@ Todas as conexões de entrada são interrompidas sem resposta e apenas as conex�
 
 * Block : Semelhante ao anterior, mas em vez de simplesmente eliminar as conexões, as solicitações de entrada são rejeitadas com uma mensagem icmp-host-prohibitedou icmp6-adm-prohibited.
 
-* Public : Representa redes públicas não confiáveis. 
+* Public : Representa redes públicas não confiáveis.</br>
 Você não confia em outros computadores, mas pode permitir conexões de entrada selecionadas caso a caso.
 
-* External : Redes externas caso você esteja usando o firewall como gateway. 
+* External : Redes externas caso você esteja usando o firewall como gateway.</br>
 Ele é configurado para mascaramento de NAT para que sua rede interna permaneça privada, mas acessível.
 
-* Internal : O outro lado da zona externa, usado para a parte interna de um gateway. Os computadores são bastante confiáveis ​​e alguns serviços adicionais estão disponíveis.
+* Internal : O outro lado da zona externa, usado para a parte interna de um gateway.</br>
+Os computadores são bastante confiáveis e alguns serviços adicionais estão disponíveis.
 
-* Dmz : Usado para computadores localizados em uma DMZ (computadores isolados que não terão acesso ao resto da rede). Apenas certas conexões de entrada são permitidas.
+* Dmz : Usado para computadores localizados em uma DMZ (computadores isolados que não terão acesso ao resto da rede).</br>
+Apenas certas conexões de entrada são permitidas.
 
-* Work : Usado para máquinas de trabalho. Confie na maioria dos computadores da rede. Mais alguns serviços podem ser permitidos.
+* Work : Usado para máquinas de trabalho. Confie na maioria dos computadores da rede.</br>
+Mais alguns serviços podem ser permitidos.
 
-* Home : Um ambiente doméstico. Geralmente implica que você confia na maioria dos outros computadores e que mais alguns serviços serão aceitos.
+* Home : Um ambiente doméstico.</br>
+Geralmente implica que você confia na maioria dos outros computadores e que mais alguns serviços serão aceitos.
 
 * Trusted : Confia em todas as máquinas da rede. A mais aberta das opções disponíveis e deve ser usada com moderação.
 
@@ -43,11 +47,11 @@ Ele é configurado para mascaramento de NAT para que sua rede interna permaneça
 
 ### Permanência de regra
 
-No firewalld, as regras podem ser aplicadas ao conjunto de regras de tempo de execução atual ou tornar-se permanentes . 
-Quando uma regra é adicionada ou modificada, por padrão, apenas o firewall em execução no momento é modificado . 
+No firewalld, as regras podem ser aplicadas ao conjunto de regras de tempo de execução atual ou tornar-se permanentes.</br>
+Quando uma regra é adicionada ou modificada, por padrão, apenas o firewall em execução no momento é modificado.</br>
 Após a próxima reinicialização - ou recarga do firewalldserviço - apenas as regras permanentes permanecerão.
 
-A maioria das firewall-cmdoperações pode receber um --permanentsinalizador para indicar que as alterações devem ser aplicadas à configuração permanente. 
+A maioria das firewall-cmdoperações pode receber um --permanentsinalizador para indicar que as alterações devem ser aplicadas à configuração permanente.</br>
 Além disso, o firewall em execução no momento pode ser salvo na configuração permanente com o firewall-cmd --runtime-to-permanentcomando.
 
 Essa separação entre o tempo de execução e a configuração permanente significa que você pode testar as regras com segurança em seu firewall ativo e, em seguida, recarregar para reiniciar se houver problemas.
