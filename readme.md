@@ -35,3 +35,15 @@ Independentemente de quão dinâmico seu ambiente de rede possa ser, ainda é ú
 * Home : um ambiente doméstico. Geralmente implica que você confia na maioria dos outros computadores e que mais alguns serviços serão aceitos.
 
 * Trusted : confia em todas as máquinas da rede. A mais aberta das opções disponíveis e deve ser usada com moderação.
+
+> Para usar o firewall, podemos criar regras e alterar as propriedades de nossas zonas e, em seguida, atribuir nossas interfaces de rede às zonas mais apropriadas.
+
+#### Permanência de regra
+
+No firewalld, as regras podem ser aplicadas ao conjunto de regras de tempo de execução atual ou tornar-se permanentes . Quando uma regra é adicionada ou modificada, por padrão, apenas o firewall em execução no momento é modificado . Após a próxima reinicialização - ou recarga do firewalldserviço - apenas as regras permanentes permanecerão.
+
+A maioria das firewall-cmdoperações pode receber um --permanentsinalizador para indicar que as alterações devem ser aplicadas à configuração permanente. Além disso, o firewall em execução no momento pode ser salvo na configuração permanente com o firewall-cmd --runtime-to-permanentcomando.
+
+Essa separação entre o tempo de execução e a configuração permanente significa que você pode testar as regras com segurança em seu firewall ativo e, em seguida, recarregar para reiniciar se houver problemas.
+
+### Instalando e habilitando firewalld
