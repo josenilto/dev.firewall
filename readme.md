@@ -32,8 +32,8 @@ Todas as conexões de entrada são interrompidas sem resposta e apenas as conex�
 <?xml version="1.0" encoding="utf-8"?>
 <zone target="%%REJECT%%">
   <short>Block</short>
-  <description>Unsolicited incoming network packets are rejected. Incoming packets that are related to outgoing network connections are accepted. 
-  Outgoing network connections are allowed.</description>
+  <description>Unsolicited incoming network packets are rejected. 
+  Incoming packets that are related to outgoing network connections are accepted. Outgoing network connections are allowed.</description>
 </zone>
 ```
 
