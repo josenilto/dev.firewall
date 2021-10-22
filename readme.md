@@ -38,7 +38,7 @@ Independentemente de quão dinâmico seu ambiente de rede possa ser, ainda é ú
 
 > Para usar o firewall, podemos criar regras e alterar as propriedades de nossas zonas e, em seguida, atribuir nossas interfaces de rede às zonas mais apropriadas.
 
-#### Permanência de regra
+### Permanência de regra
 
 No firewalld, as regras podem ser aplicadas ao conjunto de regras de tempo de execução atual ou tornar-se permanentes . Quando uma regra é adicionada ou modificada, por padrão, apenas o firewall em execução no momento é modificado . Após a próxima reinicialização - ou recarga do firewalldserviço - apenas as regras permanentes permanecerão.
 
