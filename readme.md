@@ -16,8 +16,8 @@ O firewalld daemon gerencia grupos de regras usando entidades chamadas zonas.</b
 As zonas são conjuntos de regras que determinam qual tráfego deve ser permitido, dependendo do nível de confiança que você tem na rede.</br> 
 As interfaces de rede são atribuídas a uma zona para ditar o comportamento que o firewall deve permitir.</br>
 
-Para computadores que podem se mover entre redes com frequência (como laptops), esse tipo de flexibilidade fornece um bom método de alterar suas regras, dependendo de seu ambiente.</br>
-Você pode ter regras rígidas que proíbem a maior parte do tráfego ao operar em uma rede WiFi pública, enquanto permite restrições mais relaxadas quando conectado à sua rede doméstica.</br> 
+Para computadores que podem se mover entre redes com frequência (como laptops), esse tipo de flexibilidade fornece um bom método de alterar suas regras, dependendo de seu ambiente.</br></br>
+Você pode ter regras rígidas que proíbem a maior parte do tráfego ao operar em uma rede WiFi pública, enquanto permite restrições mais relaxadas quando conectado à sua rede doméstica.</br></br>
 Para um servidor, essas zonas geralmente não são tão importantes porque o ambiente de rede raramente, ou nunca, muda.</br>
 
 Independentemente de quão dinâmico seu ambiente de rede possa ser, ainda é útil estar familiarizado com a ideia geral por trás de cada uma das zonas predefinidas para firewalld.</br>
