@@ -23,7 +23,7 @@ Para um servidor, essas zonas geralmente não são tão importantes porque o amb
 Independentemente de quão dinâmico seu ambiente de rede possa ser, ainda é útil estar familiarizado com a ideia geral por trás de cada uma das zonas predefinidas para firewalld.</br></br>
 As zonas predefinidas firewalldsão, em ordem de menos confiável para mais confiável :</br>
 
-* Drop : O nível mais baixo de confiança.</br>
+* <h4>Drop</h4></br> O nível mais baixo de confiança.</br>
 Todas as conexões de entrada são interrompidas sem resposta e apenas as conexões de saída são possíveis. </br>
 
 ```Drop
@@ -36,7 +36,7 @@ Todas as conexões de entrada são interrompidas sem resposta e apenas as conex�
 </zone>
 ```
 
-* Block : Semelhante ao anterior, mas em vez de simplesmente eliminar as conexões, as solicitações de entrada são rejeitadas com uma mensagem icmp-host-prohibitedou icmp6-adm-prohibited.
+* <h4>Block</h4></br> Semelhante ao anterior, mas em vez de simplesmente eliminar as conexões, as solicitações de entrada são rejeitadas com uma mensagem icmp-host-prohibitedou icmp6-adm-prohibited.
 
 ```Block
 <?xml version="1.0" encoding="utf-8"?>
@@ -48,7 +48,7 @@ Todas as conexões de entrada são interrompidas sem resposta e apenas as conex�
 </zone>
 ```
 
-* Public : Representa redes públicas não confiáveis.</br>
+* <h4>Public</h4></br> Representa redes públicas não confiáveis.</br>
 Você não confia em outros computadores, mas pode permitir conexões de entrada selecionadas caso a caso.
 
 ```Public
@@ -62,7 +62,7 @@ Você não confia em outros computadores, mas pode permitir conexões de entrada
 </zone>
 ```
 
-* External : Redes externas caso você esteja usando o firewall como gateway.</br>
+* <h4>External</h4></br> Redes externas caso você esteja usando o firewall como gateway.</br>
 Ele é configurado para mascaramento de NAT para que sua rede interna permaneça privada, mas acessível.
 
 ```External
@@ -76,7 +76,7 @@ Ele é configurado para mascaramento de NAT para que sua rede interna permaneça
 </zone>
 ```
 
-* Internal : O outro lado da zona externa, usado para a parte interna de um gateway.</br>
+* <h4>Internal</h4></br> O outro lado da zona externa, usado para a parte interna de um gateway.</br>
 Os computadores são bastante confiáveis e alguns serviços adicionais estão disponíveis.
 
 
@@ -88,8 +88,7 @@ Apenas certas conexões de entrada são permitidas.
 Mais alguns serviços podem ser permitidos.
 
 
-* Home : Um ambiente doméstico.</br>
-Geralmente implica que você confia na maioria dos outros computadores e que mais alguns serviços serão aceitos.
+* <h4>Home</h4>Um ambiente doméstico. Geralmente implica que você confia na maioria dos outros computadores e que mais alguns serviços serão aceitos.
 
 ```Home
 <?xml version="1.0" encoding="utf-8"?>
@@ -104,8 +103,7 @@ Geralmente implica que você confia na maioria dos outros computadores e que mai
 </zone>
 ```
 
-* <h4> Trusted </h4> : Confia em todas as máquinas da rede.</br>
-A mais aberta das opções disponíveis e deve ser usada com moderação.
+* <h4>Trusted</h4>Confia em todas as máquinas da rede. A mais aberta das opções disponíveis e deve ser usada com moderação.
 
 ```Trusted
 <?xml version="1.0" encoding="utf-8"?>
