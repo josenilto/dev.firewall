@@ -38,7 +38,8 @@ Ele é configurado para mascaramento de NAT para que sua rede interna permaneça
 <?xml version="1.0" encoding="utf-8"?>
 <zone>
   <short>External</short>
-  <description>For use on external networks. You do not trust the other computers on networks to not harm your computer. Only selected incoming connections are accepted.</description>
+  <description>For use on external networks. You do not trust the other computers on networks to not harm your computer. 
+  Only selected incoming connections are accepted.</description>
   <service name="ssh"/>
   <masquerade/>
 </zone>
