@@ -56,15 +56,18 @@ Mais alguns serviços podem ser permitidos.
 * Home : Um ambiente doméstico.</br>
 Geralmente implica que você confia na maioria dos outros computadores e que mais alguns serviços serão aceitos.
 
+```Home
 <?xml version="1.0" encoding="utf-8"?>
 <zone>
   <short>Home</short>
-  <description>For use in home areas. You mostly trust the other computers on networks to not harm your computer. Only selected incoming connections are accepted.</description>
+  <description>For use in home areas. You mostly trust the other computers on networks to not harm your computer. 
+  Only selected incoming connections are accepted.</description>
   <service name="ssh"/>
   <service name="mdns"/>
   <service name="samba-client"/>
   <service name="dhcpv6-client"/>
 </zone>
+```
 
 * Trusted : Confia em todas as máquinas da rede.</br>
 A mais aberta das opções disponíveis e deve ser usada com moderação.
