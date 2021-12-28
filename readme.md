@@ -139,3 +139,27 @@ Além disso, o firewall em execução no momento pode ser salvo na configuraçã
 Essa separação entre o tempo de execução e a configuração permanente significa que você pode testar as regras com segurança em seu firewall ativo e, em seguida, recarregar para reiniciar se houver problemas.
 
 #### ✅ Instalando e habilitando firewalld
+
+
+```install
+sudo yum install firewalld
+```
+
+
+```install
+sudo systemctl enable firewalld
+sudo reboot
+```
+
+```install
+sudo firewall-cmd --state
+```
+
+```install
+
+```
+
+```install
+
+```
+
