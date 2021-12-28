@@ -86,8 +86,7 @@ Apenas certas conexões de entrada são permitidas.
 - [x] Work : Usado para máquinas de trabalho. Confie na maioria dos computadores da rede.</br>
 Mais alguns serviços podem ser permitidos.
 
-
-* <h4>Home</h4>Um ambiente doméstico. Geralmente implica que você confia na maioria dos outros computadores e que mais alguns serviços serão aceitos.
+- [x] Home : Um ambiente doméstico. Geralmente implica que você confia na maioria dos outros computadores e que mais alguns serviços serão aceitos.
 
 ```Home
 <?xml version="1.0" encoding="utf-8"?>
@@ -102,7 +101,7 @@ Mais alguns serviços podem ser permitidos.
 </zone>
 ```
 
-* <h4>Trusted</h4>Confia em todas as máquinas da rede. A mais aberta das opções disponíveis e deve ser usada com moderação.
+- [x] Trusted : Confia em todas as máquinas da rede. A mais aberta das opções disponíveis e deve ser usada com moderação.
 
 ```Trusted
 <?xml version="1.0" encoding="utf-8"?>
