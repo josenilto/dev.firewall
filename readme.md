@@ -21,7 +21,7 @@ Você pode ter regras rígidas que proíbem a maior parte do tráfego ao operar 
 Para um servidor, essas zonas geralmente não são tão importantes porque o ambiente de rede raramente, ou nunca, muda.</br>
 
 Independentemente de quão dinâmico seu ambiente de rede possa ser, ainda é útil estar familiarizado com a ideia geral por trás de cada uma das zonas predefinidas para firewalld.</br></br>
-As zonas predefinidas firewalldsão, em ordem de menos confiável para mais confiável :</br>
+✅ As zonas predefinidas firewalldsão, em ordem de menos confiável para mais confiável :</br>
 
 - [x] Drop : O nível mais baixo de confiança.</br>
 Todas as conexões de entrada são interrompidas sem resposta e apenas as conexões de saída são possíveis. </br>
@@ -52,7 +52,7 @@ Todas as conexões de entrada são interrompidas sem resposta e apenas as conex�
 </zone>
 ```
 
-- [x] Public : Representa redes públicas não confiáveis.</br>
+- [x] Public : Representa redes públicas não confiáveis. `sudo vim /usr/lib/firewalld/services/ssh.xml`</br> 
 Você não confia em outros computadores, mas pode permitir conexões de entrada selecionadas caso a caso.
 
 ```Public
@@ -126,7 +126,7 @@ Mais alguns serviços podem ser permitidos.
 
 > Para usar o firewall, podemos criar regras e alterar as propriedades de nossas zonas e, em seguida, atribuir nossas interfaces de rede às zonas mais apropriadas.
 
-### Permanência de regra
+✅ ### Permanência de regra
 
 No firewalld, as regras podem ser aplicadas ao conjunto de regras de tempo de execução atual ou tornar-se permanentes.</br>
 Quando uma regra é adicionada ou modificada, por padrão, apenas o firewall em execução no momento é modificado.</br>
@@ -138,4 +138,4 @@ Além disso, o firewall em execução no momento pode ser salvo na configuraçã
 
 Essa separação entre o tempo de execução e a configuração permanente significa que você pode testar as regras com segurança em seu firewall ativo e, em seguida, recarregar para reiniciar se houver problemas.
 
-### Instalando e habilitando firewalld
+✅ ### Instalando e habilitando firewalld
