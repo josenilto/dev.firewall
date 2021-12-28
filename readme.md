@@ -101,7 +101,8 @@ Mais alguns serviços podem ser permitidos.
 <zone>
   <short>Home</short>
   <description>
-  For use in home areas. You mostly trust the other computers on networks to not harm your computer. 
+  For use in home areas. 
+  You mostly trust the other computers on networks to not harm your computer. 
   Only selected incoming connections are accepted.
   </description>
   <service name="ssh"/>
