@@ -23,7 +23,7 @@ Para um servidor, essas zonas geralmente não são tão importantes porque o amb
 Independentemente de quão dinâmico seu ambiente de rede possa ser, ainda é útil estar familiarizado com a ideia geral por trás de cada uma das zonas predefinidas para firewalld.</br></br>
 As zonas predefinidas firewalldsão, em ordem de menos confiável para mais confiável :</br>
 
-* <h4>Drop</h4></br> O nível mais baixo de confiança.</br>
+- [x] Drop : O nível mais baixo de confiança.</br>
 Todas as conexões de entrada são interrompidas sem resposta e apenas as conexões de saída são possíveis. </br>
 
 ```Drop
@@ -36,7 +36,7 @@ Todas as conexões de entrada são interrompidas sem resposta e apenas as conex�
 </zone>
 ```
 
-* <h4>Block</h4></br> Semelhante ao anterior, mas em vez de simplesmente eliminar as conexões, as solicitações de entrada são rejeitadas com uma mensagem icmp-host-prohibitedou icmp6-adm-prohibited.
+- [x] Block : Semelhante ao anterior, mas em vez de simplesmente eliminar as conexões, as solicitações de entrada são rejeitadas com uma mensagem icmp-host-prohibitedou icmp6-adm-prohibited.
 
 ```Block
 <?xml version="1.0" encoding="utf-8"?>
@@ -48,7 +48,7 @@ Todas as conexões de entrada são interrompidas sem resposta e apenas as conex�
 </zone>
 ```
 
-* <h4>Public</h4></br> Representa redes públicas não confiáveis.</br>
+- [x] Public : Representa redes públicas não confiáveis.</br>
 Você não confia em outros computadores, mas pode permitir conexões de entrada selecionadas caso a caso.
 
 ```Public
@@ -62,7 +62,7 @@ Você não confia em outros computadores, mas pode permitir conexões de entrada
 </zone>
 ```
 
-* <h4>External</h4></br> Redes externas caso você esteja usando o firewall como gateway.</br>
+- [x] External : Redes externas caso você esteja usando o firewall como gateway.</br>
 Ele é configurado para mascaramento de NAT para que sua rede interna permaneça privada, mas acessível.
 
 ```External
