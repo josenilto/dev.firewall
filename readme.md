@@ -76,7 +76,7 @@ Ele é configurado para mascaramento de NAT para que sua rede interna permaneça
 </zone>
 ```
 
-* <h4>Internal</h4></br> O outro lado da zona externa, usado para a parte interna de um gateway.</br>
+- [x] Internal : O outro lado da zona externa, usado para a parte interna de um gateway.</br>
 Os computadores são bastante confiáveis e alguns serviços adicionais estão disponíveis.
 
 
