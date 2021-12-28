@@ -80,11 +80,10 @@ Ele é configurado para mascaramento de NAT para que sua rede interna permaneça
 Os computadores são bastante confiáveis e alguns serviços adicionais estão disponíveis.
 
 
-* Dmz : Usado para computadores localizados em uma DMZ (computadores isolados que não terão acesso ao resto da rede).</br>
+- [x] Dmz : Usado para computadores localizados em uma DMZ (computadores isolados que não terão acesso ao resto da rede).</br>
 Apenas certas conexões de entrada são permitidas.
 
-
-* Work : Usado para máquinas de trabalho. Confie na maioria dos computadores da rede.</br>
+- [x] Work : Usado para máquinas de trabalho. Confie na maioria dos computadores da rede.</br>
 Mais alguns serviços podem ser permitidos.
 
 
